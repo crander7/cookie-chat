@@ -4,7 +4,7 @@ angular.module('chatroom').service('messageService', function($http){
   this.postMessage = function(message) {
     return $http ({
       method: 'POST',
-      url: 'http://brackcarmony.com:8092/api/chats',
+      url: 'https://brackcarmony.com:8092/api/chats',
       data: {"message": message}
     }).then(function(response) {
       return response;
@@ -25,7 +25,7 @@ angular.module('chatroom').service('messageService', function($http){
   this.getMessages = function() {
     return $http ({
       method: 'GET',
-      url: 'http://brackcarmony.com:8092/api/chats'
+      url: 'https://brackcarmony.com:8092/api/chats'
     }).then(function(response) {
       return response.data.chats;
     });
